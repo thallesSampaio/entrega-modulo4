@@ -1,0 +1,55 @@
+:root {
+    --color-light-50: #f8fafc;
+    
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-dark-900: #000;
+
+    --color-yellow-50: #FDBA00;
+    --color-yellow-100: #C99400;
+    --color-yellow-200: #FDCE4C;
+    --color-bronw-50:#7D6625;
+    --color-brown-100:#7D5C00;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.spanTxt{
+    color: var(--color-yellow-50);
+}
+
+/*CFG FOOTTER*/
+
+
+
+
+/* CFG HEADER */
+
+.nav li a{
+	transition: all 0.3s ease 0s;
+    font-size: 20px;
+	text-decoration: none;
+	color: var(--color-light-50);
+}
+
+.nav li a:hover {
+    color: var(--color-yellow-50);
+}
+
+.tabelaBonita{
+   border-collapse: collapse;
+}
+
+.tabelaBonita th, td{
+   border: 1px solid black;
+   padding: 10px;
+}
+
+.tableContainer {
+	overflow-x: auto;
+}

@@ -1,0 +1,37 @@
+create DATABASE RJTRIP;
+
+use RJTRIP;
+
+CREATE TABLE cliente (
+cliente_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nomeCliente VARCHAR(100),
+cpf VARCHAR(14) UNIQUE,
+dataNascimento DATE,
+email VARCHAR(100) UNIQUE,
+senha VARCHAR(32),
+endereco VARCHAR(200)
+);
+
+CREATE TABLE pacote (
+pacote_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+tipoPacote VARCHAR(50)
+);
+
+CREATE TABLE pedido (
+pedido_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+cli_id INT,
+paco_id INT,
+duracao INT,
+dataViagem DATE,
+destinosEscolhidos VARCHAR(150),
+FOREIGN KEY(cli_id) REFERENCES cliente(cliente_id),
+FOREIGN KEY(paco_id) REFERENCES pacote(pacote_id)
+);
+
+CREATE TABLE contatosmsg (
+  contato_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  nomeContato varchar(100) NOT NULL,
+  emailContato varchar(100) NOT NULL,
+  telefoneContato varchar(100) NOT NULL,
+  mensagemContato varchar(500) UNIQUE NOT NULL
+);
